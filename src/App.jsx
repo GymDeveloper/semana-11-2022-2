@@ -6,7 +6,7 @@ import { Container } from "@mui/material";
 import { get } from "./services";
 
 function App() {
-  const [type, setType] = useState("");
+  const [type, setType] = useState("https://pokeapi.co/api/v2/type/1/");
 
   const [types, setTypes] = useState([]);
 
@@ -15,6 +15,8 @@ function App() {
   async function getTypes() {
     const types = await get("type");
     setTypes(types.results);
+
+    await getPokemons(type);
   }
 
   async function getPokemons(url) {

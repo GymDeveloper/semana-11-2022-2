@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardContent,
   CardMedia,
@@ -25,6 +26,7 @@ const CardPokemons = ({ pokemons }) => {
                 />
                 <CardContent>
                   <Typography variant="body1">{pokemon.name}</Typography>
+                  <Button>Ver detalle</Button>
                 </CardContent>
               </Card>
             </Grid>
